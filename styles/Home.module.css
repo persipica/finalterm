@@ -306,37 +306,73 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 .contactForm label {
-  margin-bottom: 5px;
-  font-size: 14px;
-  color: #555;
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
 }
 
 .contactForm input,
 .contactForm textarea {
   width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
+  padding: 12px;
+  margin-bottom: 20px;
   border: 1px solid #ddd;
-  border-radius: 5px;
-  font-size: 14px;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #555;
+  transition: border-color 0.3s ease;
+}
+
+.contactForm input:focus,
+.contactForm textarea:focus {
+  border-color: #0070f3;
+  outline: none;
+}
+
+.contactForm textarea {
+  height: 150px;
+  resize: vertical;
 }
 
 .contactForm button {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   background-color: #d89a5a;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   font-size: 16px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .contactForm button:hover {
   background-color: #b9793e;
+}
+
+.contactForm button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* 성공 및 실패 메시지 스타일 */
+.contactForm .statusMessage {
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+.contactForm .statusMessage.success {
+  color: green;
+}
+
+.contactForm .statusMessage.error {
+  color: red;
 }
 
 .footer {

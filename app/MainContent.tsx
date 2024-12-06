@@ -6,6 +6,7 @@ import Header from '../components/Header'
 import Loading from './Loading'
 import { ScrollToTop } from '@/components/ScrollToTop'
 import Modal from '../components/Modal'
+import { ContactForm } from '@/components/ContactForm'
 
 interface GitHubRepo {
   id: number
@@ -289,38 +290,10 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="contact" className={styles.contactMe}>
-          <h2>Contact Me</h2>
-
-          <div className={styles.contactInfo}>
-            <p>
-              <i className="fas fa-phone"></i> TEL : 010-8597-7633
-            </p>
-            <p>
-              <i className="fas fa-envelope"></i> Email : likekhs0107@naver.com
-            </p>
-          </div>
-
-          <form className={styles.contactForm}>
-            <label htmlFor="email">Your Email</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="이메일을 입력하세요"
-              required
-            />
-
-            <label htmlFor="message">Message</label>
-            <textarea
-              id="message"
-              name="message"
-              placeholder="메시지를 입력하세요"
-              required
-            ></textarea>
-
-            <button type="submit">Submit</button>
-          </form>
+        <section id="contact" className={styles.contact}>
+          <h2>Contact</h2>
+          {/* ContactForm 컴포넌트 추가 */}
+          <ContactForm />
         </section>
 
         <footer className={styles.footer}>
