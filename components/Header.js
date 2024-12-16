@@ -27,7 +27,7 @@ export default function Header() {
       </div>
 
       <nav className={styles.nav}>
-        <ul>
+        <ul className={styles.navList}>
           <li>
             <a href="#about-me" onClick={(e) => handleScroll(e, 'about-me')}>
               Aboutme
@@ -48,10 +48,10 @@ export default function Header() {
               Contact
             </a>
           </li>
-          <li>
+          <li className={styles.authSection}>
             {status === 'authenticated' ? (
               <>
-                <div className="flex gap-2 items-center">
+                <div className={styles.userInfo}>
                   <Image
                     className="rounded-full"
                     src={session?.user?.image ?? '/default-avatar.png'}
@@ -59,15 +59,11 @@ export default function Header() {
                     height={40}
                     alt={session?.user?.name ?? 'user'}
                   />
-
-                  <span className="text-white font-bold">
-                    {session?.user?.name}
-                  </span>
+                  <span className={styles.userName}>{session?.user?.name}</span>
                 </div>
-
                 <button
                   onClick={() => signOut()}
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-lg font-bold"
+                  className={styles.signOutButton}
                 >
                   Sign Out
                 </button>

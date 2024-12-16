@@ -5,13 +5,11 @@ export async function POST(req: NextRequest) {
   const { email } = user
 
   try {
-    // 로그인 처리
     const apiUrl = process.env.API_URL
     if (!apiUrl) {
       throw new Error('API_URL is not defined in the environment variables')
     }
 
-    // 로그 기록 API 호출
     await fetch(`${apiUrl}/api/log`, {
       method: 'POST',
       headers: {
