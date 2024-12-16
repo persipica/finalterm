@@ -1,0 +1,181 @@
+@font-face {
+  font-family: 'NanumSquare';
+  font-weight: 400;
+  font-style: normal;
+  src: url('/public/fonts/NanumSquareRoundL.ttf') format('ttf');
+}
+
+body {
+  margin: 0;
+  font-family: 'NanumSqure', sans-serif;
+  background-color: #ffffff;
+  color: #333;
+  line-height: 1.8;
+  text-align: center;
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-family: 'NanumSqure', serif;
+  font-size: 4rem;
+  font-weight: 700;
+  color: #222;
+  margin: 40px 0;
+}
+
+h2,
+h3 {
+  font-weight: 600;
+  color: #333;
+}
+
+p {
+  font-size: 1.2rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section {
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.skill-card {
+  background-color: #fefefe;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 30px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.skill-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ff7043;
+  margin-bottom: 15px;
+}
+
+.skill-description {
+  font-size: 1.1rem;
+  color: #444;
+}
+
+#about-me {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #f8f9fa;
+}
+
+#about-me h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+#about-me p {
+  font-size: 18px;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+#contact-me {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+#contact-me h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+#contact-me p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.contact-link {
+  font-size: 18px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+}
+
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #1e1e1e;
+  color: white;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.progressContainer {
+  width: 80%;
+  height: 15px;
+  background-color: #3e3e3e;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 10px;
+  position: relative;
+}
+
+.progressBar {
+  height: 100%;
+  background-color: #76c7c0;
+  border-radius: 10px;
+  animation: loading 1.5s linear infinite;
+}
+
+@keyframes loading {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.skill-card,
+.project-card {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
