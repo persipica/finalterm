@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useEffect, useState, Suspense } from 'react'
-import { useSession } from 'next-auth/react' // useSession 훅 추가
+import { useSession } from 'next-auth/react'
 import styles from '../styles/Home.module.css'
 import Header from '../components/Header'
 import Loading from './Loading'
